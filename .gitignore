@@ -1,12 +1,17 @@
 # Dependencies
 node_modules/
+**/node_modules/
 
 # Environment variables & sensitive key files
 .env
+**/.env
 .env.*
+**/.env.*
 !.env.example
+!**/.env.example
 env.local.js
-public/env.local.js
+**/env.local.js
+**/public/env.local.js
 *.pem
 *.key
 *.p12
@@ -24,6 +29,7 @@ build/
 dist/
 .turbo/
 .vercel/
+**/.vercel/
 .cache/
 .parcel-cache/
 *.tsbuildinfo
@@ -38,7 +44,9 @@ pnpm-debug.log*
 
 # Local media cache, temporary scratch/patch/diagnostic scripts & backups
 storage/
+**/storage/
 scratch/
+**/scratch/
 check_*.js
 patch_*.js
 inspect_*.js

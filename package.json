@@ -1,21 +1,14 @@
 {
-  "name": "nzembo",
+  "name": "nzembo-landing",
   "version": "1.0.0",
   "private": true,
-  "description": "Nzembo — Plateforme unifiée (Landing, Studio IA 12 outils, Admin & Backend API)",
+  "description": "Nzembo (nzembo.net) — Landing Page & Site Vitrine",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js",
-    "server": "node server/server.js",
-    "proxy": "node proxy-suno.js",
-    "init-db": "node server/db.js"
+    "dev": "node index.js"
   },
   "dependencies": {
-    "@supabase/supabase-js": "^2.119.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "pg": "^8.13.1"
+    "express": "^4.21.2"
   }
 }

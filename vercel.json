@@ -4,118 +4,37 @@
   "outputDirectory": "public",
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    {
-      "source": "/env.local.js",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/api/(.*)",
-      "destination": "/api/index.js"
-    },
-    {
-      "source": "/public/(.*)",
-      "destination": "/$1"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "app.nzembo.net"
-        }
-      ],
-      "destination": "/app.html"
-    },
-    {
-      "source": "/((?!api/|env\\.local\\.js|.*\\..*).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "app.nzembo.net"
-        }
-      ],
-      "destination": "/app.html"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "app.nzembo.com"
-        }
-      ],
-      "destination": "/app.html"
-    },
-    {
-      "source": "/((?!api/|env\\.local\\.js|.*\\..*).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "app.nzembo.com"
-        }
-      ],
-      "destination": "/app.html"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.nzembo.net"
-        }
-      ],
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/((?!api/|env\\.local\\.js|.*\\..*).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.nzembo.net"
-        }
-      ],
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.nzembo.com"
-        }
-      ],
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/((?!api/|env\\.local\\.js|.*\\..*).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "admin.nzembo.com"
-        }
-      ],
-      "destination": "/admin.html"
-    },
+  "redirects": [
     {
       "source": "/app",
-      "destination": "/app.html"
+      "destination": "https://app.nzembo.net",
+      "permanent": false
     },
     {
-      "source": "/app/((?!.*\\..*).*)",
-      "destination": "/app.html"
-    },
-    {
-      "source": "/admin",
-      "destination": "/admin.html"
-    },
-    {
-      "source": "/admin/((?!.*\\..*).*)",
-      "destination": "/admin.html"
+      "source": "/app/(.*)",
+      "destination": "https://app.nzembo.net/$1",
+      "permanent": false
     },
     {
       "source": "/invite/(.*)",
-      "destination": "/app.html"
+      "destination": "https://app.nzembo.net/invite/$1",
+      "permanent": false
+    },
+    {
+      "source": "/admin",
+      "destination": "https://admin.nzembo.net",
+      "permanent": false
+    },
+    {
+      "source": "/admin/(.*)",
+      "destination": "https://admin.nzembo.net/$1",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/public/(.*)",
+      "destination": "/$1"
     },
     {
       "source": "/",
